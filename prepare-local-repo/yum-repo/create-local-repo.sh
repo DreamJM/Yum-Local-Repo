@@ -3,7 +3,7 @@
 repo_base=/root
 
 tar -zxvf createrepo.tgz
-rpm -ivh createrepo/*.rpm
+rpm -ivh --force --nodeps createrepo/*.rpm
 
 [[ -d $repo_base/yum-local-repo ]] && rm -rf $repo_base/yum-local-repo
 tar -zxf yum-local-repo.tgz -C $repo_base
